@@ -1,0 +1,346 @@
+:root {
+    --theme: #f9a11c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Poppins', 'Roboto' , 'Oleo Script Swash Caps', Arial, Helvetica, sans-serif;
+}
+
+.container {
+    overflow: hidden;
+}
+
+/* Navigasi */
+nav {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    padding: 10px 50px;
+}
+
+nav .logo {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 35px;
+}
+
+nav .logo h3 {
+    margin-left: 10px;
+}
+
+nav .menu-nav {
+    list-style: none;
+    font-size: 0.9em;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    grid-auto-flow: column;
+    justify-content: space-between;
+    font-family: 'roboto';
+    font-weight: 500;
+}
+
+.menu-nav a {
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-nav a:hover::after {
+    z-index: -1;
+    position: absolute;
+    left: -6px;
+    top: -4px;
+    content: "";
+    background-color: #ff7700;
+    width: 100%;
+    height: 100%;
+    padding: 5px 7px;
+    border-radius: 8px;
+}
+
+
+/* Header */
+header {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header h3 {
+    font-size: 1.8em;
+    font-weight: 400;
+    font-family: 'roboto';
+    margin: 5px auto;
+}
+
+.stroke {
+    margin: 10px auto;
+    width: 200px;
+    height: 7px;
+    border-radius: 30px;
+    background-color: var(--theme);
+}
+
+header h1 {
+    font-size: 5em;
+    font-weight: 500;
+    margin: 10px auto;
+}
+
+.btn {
+    margin: 15px;
+    color: white;
+    font-family: 'roboto';
+    font-weight: 500;
+    font-size: 1.1em;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--theme);
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Page Two */
+.page-two {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+}
+
+.page-two .image {
+    background-image: url(5.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.page-two .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.tittle {
+    font-family: 'roboto';
+    font-size: 1.8em;
+}
+
+.isi {
+    font-family: 'roboto';
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    line-height: 35px;
+    margin: 70px 0;
+}
+
+.tombol button {
+    width: 100px;
+    height: 40px;
+    margin: 0 20px;
+    border: none;
+    font-family: 'roboto';
+    font-weight: 500;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.tombol button:nth-child(1) {
+    background-color: rgb(191, 191, 191);
+}
+
+.tombol button:nth-child(2) {
+    background-color: var(--theme);
+}
+
+.tombol button:hover:first-child {
+    background-color: rgb(217, 217, 217);
+}
+
+.tombol button:hover:last-child {
+    background-color: #ff9940;
+}
+
+
+
+/* Page Three */
+.page-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 50px 0;
+}
+
+.page-three .tittle {
+    grid-column: 1 / -1;
+    margin-top: 50px;
+}
+
+.page-three .stroke {
+    grid-column: 1 / -1;
+}
+
+.page-three .menu {
+    margin-top: 70px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-three .menu .img {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu.satu .img {
+    background-image: url(2.jpg);
+}
+
+.menu.dua .img {
+    background-image: url(3.jpeg);
+}
+
+.page-three .menu h3 {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.page-three .menu p {
+    margin-top: 15px;
+    text-align: center;
+    width: 85%;
+    font-family: 'roboto';
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.page-three .menu .btn {
+    margin-top: 30px;
+    transform: scale(0.9);
+}
+
+.page-three .menu .btn:hover {
+    background-color: rgb(191, 191, 191);
+}
+
+
+/* Page Four */
+.page-four {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(4.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 0 50px;
+}
+
+.page-four .tittle {
+    font-size: 4em;
+}
+
+.page-four .stroke {
+    margin: 10px 0;
+    width: 350px;
+}
+
+.page-four .isi {
+    text-align: left;
+    width: 60%;
+}
+
+.page-four .btn {
+    margin: 0;
+}
+
+
+
+/* Page Five */
+.page-five{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border:  1px solid red;
+}
+.page-five .search{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-five .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    border: 1px solid black;
+    width: 100%;
+}
+.menu-order{
+    border: 1px solid black;
+    background-color: #ff7700;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+/* 
+
+.page-five .tittle {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.page-five .search {
+    grid-column: 7 / -2;
+}
+
+.page-five .menu-order {
+    background-color: rgb(191, 191, 191);
+    width: 250px;
+    height: 500px;
+    box-sizing: border-box;
+}
+*/
